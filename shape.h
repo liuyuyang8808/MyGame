@@ -6,9 +6,11 @@
 
 class Shape{
 protected:
-    std::vector<std::vector<int>> *m_grid;
-public:
+    vector<pair<int,int>> grid;
     virtual void set() = 0;
-    void clear();
+public:
+    vector<pair<int,int>> get();
 };
 
+
+class Cube : public Shape {};

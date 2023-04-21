@@ -7,8 +7,8 @@
 class Controller
 {
 protected:
-    Shape *m_shape;
     Map *m_map;
+    vector<pair<int,int>> move_axis; 
 public:
     Controller();
     Controller(Map* map);
@@ -21,6 +21,7 @@ public:
 private:
     void GetNewShape(Shape* newShape);
     void InsertMap();
+    bool CollisionCheck();
 };
 
 #endif // CONTROLLER_H
